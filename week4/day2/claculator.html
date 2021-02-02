@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #min {
+            background-color: red;
+            float: left;
+            border: 3px solid black;
+            margin-top: 30px;
+
+        }
+
+        #max {
+            background-color: green;
+            border: 3px solid black;
+            float: left;
+            margin-top: 30px;
+        }
+
+        .class1 {
+            width: 150px;
+            height: 80px;
+            margin-left: 100px;
+        }
+
+        div>h2 {
+            text-align: center;
+        }
+
+        .clear {
+            clear: both
+        }
+
+        #main_box {
+            width: 200px;
+            /* height: 80px; */
+            border: 3px solid black;
+            margin: auto;
+            /* margin-top: 10px; */
+            background-color: lightgrey;
+            font-size: 28px;
+            text-align: center;
+
+        }
+
+        body {
+            width: 600px;
+            height: 780px;
+            border: 1px solid black;
+            margin: auto;
+            
+        }
+
+        #calculator {
+            width: 60%;
+            background-color: skyblue;
+            margin: auto;
+            display: grid;
+            gap: 5px;
+            grid-template: "nine eight seven"
+                "six five four"
+                "three two one"
+                "zero enter enter";
+
+        }
+
+
+        #zero {
+            grid-area: zero;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #one {
+            grid-area: one;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #two {
+            grid-area: two;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #three {
+            grid-area: three;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #four {
+            grid-area: four;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #five {
+            grid-area: five;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #six {
+            grid-area: six;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #seven {
+            grid-area: seven;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #eight {
+            grid-area: eight;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #nine {
+            grid-area: nine;
+            height: 60px;
+            background-color: teal;
+        }
+
+        #final {
+            grid-area: enter;
+            height: 60px;
+            background-color: rgb(48, 221, 57);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="min" class="class1">
+        <h2>43</h2>
+    </div>
+    <div id="max" class="class1">
+        <h2>2019</h2>
+    </div>
+    <div class="clear"></div>
+    <br/><br/>
+    <div id="main_box">
+        <h2>value</h2>
+    </div>
+    <br/><br/>
+    <div id="calculator">
+        <button onclick="addnum(0)" id="zero">0</button>
+        <button onclick="addnum(1)" id="one">1</button>
+        <button onclick="addnum(2)" id="two">2</button>
+        <button onclick="addnum(3)" id="three">3</button>
+        <button onclick="addnum(4)" id="four">4</button>
+        <button onclick="addnum(5)" id="five">5</button>
+        <button onclick="addnum(6)" id="six">6</button>
+        <button onclick="addnum(7)" id="seven">7</button>
+        <button onclick="addnum(8)" id="eight">8</button>
+        <button onclick="addnum(9)" id="nine">9</button>
+        <button onclick="enter()" id="final">ENTER</button>
+    </div>
+    <script>
+        var num = ""
+
+        function addnum(number) {
+            num += number
+            var calci = document.getElementById("main_box")
+            calci.textContent = num
+
+        }
+
+        function enter() {
+            var minNum = Number(document.getElementById("min").textContent)
+            var maxNum = Number(document.getElementById("max").textContent)
+            var calci = Number(document.getElementById("main_box").textContent)
+            var parent1 = document.getElementById("min")
+            var parent2 = document.getElementById("max")
+            if (calci < minNum) {
+                parent1.textContent = calci
+
+            } else if (calci > maxNum) {
+                parent2.textContent = calci
+            } else if (calci > minNum) {
+                parent1.textContent = minNum
+            } else if (calci < maxNum) {
+                parent2.textContent = maxNum
+            }
+        }
+    </script>
+
+</body>
+
+</html>

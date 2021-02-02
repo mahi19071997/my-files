@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex1 {
+            display: flex;           
+
+        }
+
+        .flex1> div {
+            height: 150px;
+            margin: 20px;
+            background: teal;
+            flex-basis: 200px;
+
+        }
+        #top>div:nth-child(2){
+            flex-grow: 1;
+        }
+        #mid>div:nth-child(1){
+            flex-grow: 1;
+        }
+        #bottom>div:nth-child(3){
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="top" class="flex1">
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+    <div id="mid" class="flex1"  >
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flex1" id="bottom">
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+
+</body>
+
+</html>

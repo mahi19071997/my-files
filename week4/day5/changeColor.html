@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Change the buttons text color random value</h1>
+  <button id="changeColor">Click here to change my color</button>
+  <script>
+      var changeColor = document.getElementById("changeColor");
+      function name(number){
+          return Math.floor(Math.random() *number )
+      }
+      function switchColor(){
+    var randomColor = 'rgb(' + name(255) + ',' + name(255) + ',' + name(255) + ')';
+    var call= document.getElementById("changeColor")
+    call.style.color = randomColor
+      }
+      changeColor.addEventListener('click',switchColor )
+
+  </script>
+</body>
+</html>

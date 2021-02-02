@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body id="bd">
+
+    <script>
+        var window = document.getElementById('bd');
+
+        function name(nam) {
+            return Math.floor(Math.random() * nam)
+        }
+
+        function switchcolor() {
+            var randomColor = 'rgb(' + name(255) + ',' + name(255) + ',' + name(255) + ')';
+            var call = document.getElementById('bd')
+            call.style.backgroundColor = randomColor
+
+        }
+        window.addEventListener('resize', switchcolor)
+    </script>
+</body>
+
+</html>

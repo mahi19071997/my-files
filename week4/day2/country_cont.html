@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <select name="Country" id="continents">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweden">Sweden</option>
+        </select>
+        <button onclick="continent()">Check Continent</button>
+        <p id="message"></p>
+        <script>
+            function continent() {
+                var places = document.getElementById("message");
+                var earth = document.getElementById("continents").value;
+                switch(earth) {
+                    case "USA":
+                    places.textContent = "The continent is North America."
+                        break;
+                    case "China":
+                    places.textContent = "The continent is Asia."
+                        break;
+                    case "India":
+                    places.textContent = "The continent is Asia."
+                        break;
+                    case "Nepal":
+                    places.textContent = "The continent is Asia."
+                        break;
+                    case "France":
+                    places.textContent = "The continent is Europe."
+                        break;
+                    case "Australia":
+                    places.textContent = "The continent is Australia."
+                        break;
+                    case "Germany":
+                    places.textContent = "The continent is Europe."
+                        break;
+                    case "Nigeria":
+                    places.textContent = "The continent is Africa."
+                        break;
+                    case "South Africa":
+                    places.textContent = "The continent is Africa."
+                        break;
+                    case "Mexico":
+                    places.textContent = "The continent is North America."
+                        break;
+                    case "Sweden":
+                    places.textContent = "The continent is Asia."
+                        break;
+                    case "Brazil":
+                    places.textContent = "The continent is South America."
+                        break;
+                    case "Canada":
+                    places.textContent = "The continent is North America."
+                        break;
+                    case "Argentina":
+                    places.textContent = "The continent is South America."
+                        break;
+                        case "Singapore":
+                    places.textContent = "The continent is Asia."
+                        break;
+                    
+
+                }
+                alert(places.textContent)
+                    
+        }
+        </script>
+    </body>
+</html>

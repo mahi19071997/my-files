@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #main {
+            display: grid;
+            width: 90%;
+            gap: 25px;
+            margin: auto;
+            grid-template: "left1 left1"
+                " right1 right3"
+                "right2 right4"
+                "left2 left2";
+        }
+
+        #left1 {
+            height: 370px;
+            grid-area: left1;
+            background-color: rgb(24, 11, 70);
+            color: white;
+        }
+
+        #left2 {
+            min-height: 120px;
+            grid-area: left2;
+        }
+
+        #right1 {
+            min-height: 120px;
+            grid-area: right1;
+        }
+
+        #right2 {
+            min-height: 120px;
+            grid-area: right2;
+        }
+
+        #right3 {
+            min-height: 120px;
+            grid-area: right3;
+        }
+
+        #right4 {
+            min-height: 100px;
+            grid-area: right4;
+        }
+
+        .small img {
+            width: 20%;
+            min-height: 100px;
+            float: left;
+        }
+        .small>p {
+            margin-left: 22%;
+            margin-top: 1%;
+            font-size: 18px;
+        }
+        .small>h4 {
+            color: rgb(43,84,126);
+            margin-left: 22%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        #left1 > img {
+            height: 50%;
+            width: 100%;
+        }
+        #left1>h2 {
+            padding-left: 10px;
+            font-size: 28px;
+            margin-top: 5px;
+            color: white;
+        }
+        #left1>p{
+            padding-left: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            color: silver;
+            line-height: 20px;
+            margin: 5px;
+        }
+        #left1>h5 {
+            padding-left: 10px;
+            font-size: 14px;
+            color: white;
+            margin: 5px;
+        }  
+
+        @media(min-width:992px){
+            #main{
+                grid-template: "left1 right1"
+            "left1 right2"
+            "left1 right3"
+            "left2 right4";
+            }
+            
+        }
+        @media(max-width:600px){
+            #main{
+                grid-template: "left1"
+            "left2"
+            "right1"
+            "right2"
+            "right3"
+            "right4";
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left1">
+            <img
+                src="https://www.thehindu.com/news/national/fwrz7q/article30897008.ece/ALTERNATES/LANDSCAPE_615/TH24Trump-visit1" />
+            <h2>Ahemdabaad joint rally with Trump will be historical, says Modi.</h2>
+            <h5>KALLOL BHATTACHERJEE</h5>
+            <h5>SUHASINI HAIDER</h5>
+            <p>U.S.President to visit Sabarmasti Ashram ahead of 'Namaste Trump' event.</p>
+        </div>
+        <div id="left2" class="small"><img
+                src="https://th.bing.com/th/id/OIP.VQXSdNqvluogKZBn6bJ6WwHaEn?w=233&h=180&c=7&o=5&pid=1.7" />
+            <h4>THE HUDDLE</h4>
+            <P>The Huddle 2020 | Regional integration pegged to SAARC revival, says Ranil Wickremesinghe</P>
+        </div>
+        <div id="right1" class="small"> <img
+                src="https://th.bing.com/th/id/OIP.4n6mqHk9XrXEEpf0ALPdqgHaEH?w=322&h=180&c=7&o=5&pid=1.7" />
+            <h4>NATIONAL</h4>
+            <P>Over 10 Lakh Kashmir students to don school uniforms after 7 months</P>
+        </div>
+        <div id="right2" class="small"><img
+                src="https://th.bing.com/th/id/OIP.KTMGSYgEryXqq_48c1p1lAHaEn?w=238&h=180&c=7&o=5&pid=1.7" />
+            <h4>NATIONAL</h4>
+            <P>Some restriction imposed on export of medical equipment to china, says MEA</P>
+        </div>
+        <div id="right3" class="small"><img
+                src="https://th.bing.com/th/id/OIP.YFJ3RTNnV7Sc0wTJqhO8GgHaEK?w=281&h=180&c=7&o=5&pid=1.7" />
+            <h4>NATIONAL</h4>
+            <P>Ahmdabad glitters to welcome Donald Trump</P>
+        </div>
+        <div id="right4" class="small">
+            <img src="https://th.bing.com/th/id/OIP.2gpkqGOEEh9YDMTgr6M84gHaEn?pid=Api&rs=1" />
+            <h4>THE HUDDLE</h4>
+            <P>Only a 'Mircoscopic Minority' protesting against CAA: Tejaswi Surya</P>
+        </div>
+    </div>
+
+</body>
+
+</html>

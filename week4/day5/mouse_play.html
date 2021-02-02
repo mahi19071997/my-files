@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    .box{
+        height: 200px;
+        width: 300px;
+        background: greenyellow;
+        margin: auto;
+        text-align: center;
+    }
+    .buttonInside{
+        background-color: hotpink;
+        width: 100px;
+        border-radius: 10px;
+        text-align: center;
+        height: 40px;
+        margin-top: 150px;
+        margin-right: 20px;
+        float: right;
+        
+    }
+   
+
+
+    </style>
+</head>
+<body>
+    <button id="layout">Open Layout</button>
+
+
+
+    <script>
+        var div = document.createElement("div");
+        var btn= document.createElement("button");
+        var body= document.body;
+        var layout = document.getElementById("layout")
+
+        function random(number){
+        return Math.floor(Math.random()*number)
+        }
+
+
+        function setColor(){
+            var randomClr = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            btn.style.backgroundColor= randomClr
+        }
+
+        function lay(){
+            btn.textContent="submit";
+            div.setAttribute("class", "box")
+            btn.setAttribute("class", "buttonInside")
+            div.appendChild(btn)
+            body.appendChild(div)
+        }
+        function changeOriginal(){
+
+            btn.style.backgroundColor="hotpink"
+        }
+        layout.addEventListener("click", lay);
+        div.addEventListener("mouseover",setColor);
+        div.addEventListener("mouseout",changeOriginal);
+
+
+    </script>
+    
+</body>
+</html>

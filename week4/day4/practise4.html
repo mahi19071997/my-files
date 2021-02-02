@@ -1,0 +1,68 @@
+<!-- Complete the functionality in the file deletions.html
+
+On clicking the button Remove H1 the <h1> with the content First H1 should get removed from the page
+On clicking the button Remove H3 both the <h3> should get removed from the page
+On clicking the button Remove H5 all the <h5> from the page should be removed
+On clicking the button Remove Red all the elements inside cont with the class red should be removed from the page
+On clicking the button Remove DIVS all the div elements inside cont should be removed from the page -->
+
+
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDivs()">Remove DIVS</button>
+        <script>
+            function removeH1(){
+                var parent = document.querySelector('h1')
+                parent.remove()
+
+            }
+            function removeH3(){
+                var parent= document.querySelectorAll('h3')
+                for (var i=0;i<parent.length;i++)
+                parent[i].remove()
+            }
+            function removeH5(){
+                var parent=document.querySelectorAll("h5")
+                for(var i=0;i<parent.length;i++)
+                parent[i].remove()
+            }
+            function removeRed(){
+                var parent= document.getElementById("cont")
+                var red= parent.querySelectorAll(".red")
+                for(var i=0;i<red.length;i++)
+                red[i].remove()
+            }
+            function removeDivs(){
+                var parent = document.getElementById("cont")
+                var divs = parent.querySelectorAll("div")
+                for(var i=0;i<divs.length;i++)
+                divs[i].remove()
+            }
+        </script>
+    </body>
+</html>

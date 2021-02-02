@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="Gender" id="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        
+    </select>
+        
+    <input type="text" id="year"/>
+
+    <button onclick="check()">Check Eligibilty</button>
+    <p id="message"></p>
+
+    <script>
+        function check(){
+            var gender= document.getElementById("Gender").value
+            var Year= Number(document.getElementById("year").value)
+            var mess= document.getElementById("message")
+            var age= 2021-Year;
+
+            if(gender=="Male" && age>=21){
+                mess.textContent="valid"
+            }
+            else if(gender=="Male" && age<21){
+                mess.textContent="Invalid"
+            }
+            else if(gender=="Female" && age>=18){
+                mess.textContent="valid"
+            }
+            else{
+                mess.textContent="invalid";
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

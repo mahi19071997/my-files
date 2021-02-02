@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><Form></Form></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <form>
+        <div>Name</div>
+        <input type="text" id="studentname" />
+        <div>Age</div>
+        <input type="text" id="age" /><br/>
+        <div>Science</div>
+        <input type="text" id="science" />
+        <div>English</div>
+        <input type="text" id="english" />
+        <div>Maths</div>
+        <input type="text" id="maths" /><br/>
+        <input type="submit" value="Total" />
+    </form>
+
+    <table>
+        <!-- <tr>
+
+            <td>Name</td>
+            <td>Age</td>
+            <td>Science</td>
+            <td>english</td>
+            <td>Maths</td>
+            <td>Total</td>
+            <td><button>Delete</button></td>
+
+        </tr> -->
+
+    </table>
+
+
+    <script type="text/javascript">
+        
+        
+        var form = document.querySelector("form");
+        var table = document.querySelector("table");
+
+        function deleteScore(event) {
+            var target=event.target;
+            target.parentNode.parentNode.remove();
+
+        }
+
+        function addMarks(e) {
+            e.preventDefault()
+            var name = document.getElementById("studentname").value;
+            var age = document.getElementById("age").value;
+            var science = Number(document.getElementById("science").value);
+            var eng = Number(document.getElementById("english").value);
+            var maths = Number(document.getElementById("maths").value);
+
+            if (name.length > 0) {
+                var row = document.createElement("tr");
+                var col1 = document.createElement("td");
+                var col2 = document.createElement("td");
+                var col3 = document.createElement("td");
+                var col4 = document.createElement("td");
+                var col5 = document.createElement("td");
+                var col6 = document.createElement("td");
+                var col7 = document.createElement("td");
+                var btn1 = document.createElement("button");
+
+                col1.textContent = name;
+                col2.textContent = age;
+                col3.textContent = science;
+                col4.textContent = eng;
+                col5.textContent = maths;
+
+                var sum = science+maths+eng;
+                console.log(sum);
+                col6.textContent = sum;
+                btn1.textContent = "Delete Marks";
+                btn1.addEventListener("click", deleteScore);
+                col7.appendChild(btn1);
+                row.appendChild(col1);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                row.appendChild(col4);
+                row.appendChild(col5);
+                row.appendChild(col6);
+                row.appendChild(col7);
+                table.appendChild(row);
+                console.log(table);
+
+                document.getElementById("studentname").value = "";
+                document.getElementById("age").value = "";
+                document.getElementById("science").value = "";
+                document.getElementById("english").value = "";
+                document.getElementById("maths").value = "";
+            }
+        }
+        form.addEventListener("submit",addMarks);
+    </script>
+</body>
+
+</html>

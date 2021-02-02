@@ -1,0 +1,224 @@
+<!-- Build a webpage which looks similar to the layout provided below layout.html
+Use of inline styles for any of the html tags is not allowed
+Use Placeholder images whenever required https://placeholder.com/
+Use multiple classes to reuse the class
+Write clean code with proper naming and indentation
+Use Flex Layout to create the Scholarship Items
+Use Grid Layout to create the Program Items
+Use Media queries to make sure the look of the page is good in all screen sizes
+The count of program items per row in different screen sizes (3-Large, 2-Medium, 1-Small) -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #firstbox{
+        display: flex;
+        width: 100%;
+        height: 12vw;
+        background-color: rgb(208, 231, 240);
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    #firstbox .firstbox1, #firstbox .firstbox2, #firstbox .firstbox3{
+        border-radius: 10px;
+        margin: 15px;
+        height: 8vw;
+        margin-top: 20px;
+    }
+    #firstbox .firstbox1{
+        background-color: rgb(226, 226, 102);
+    }
+    #firstbox .firstbox2{
+        background-color: rgb(46, 155, 228);
+    }
+    #firstbox .firstbox3{
+        background-color: rgb(25, 212, 66);
+    }
+    #firstbox >div img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin: 10px;
+        margin-left: 70px;
+    }
+    .firstbox1 h3, .firstbox1 h4, .firstbox2 h3 ,.firstbox2 h4, .firstbox3 h3,.firstbox3 h4{
+       padding-left: 0px;
+       line-height: 15px;
+       margin: 20px;
+       margin-left: 20px;
+       
+    }
+    
+    #firstbox div{
+        flex-grow: 1;
+        text-align: center;
+    }
+    .clear{
+        clear: both;
+    }
+    #secondbox{
+        display: grid;
+        grid-template:"a a a a"
+        "b c d e" ;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    #secondbox .secondbox1,#secondbox .secondbox2, #secondbox .secondbox3,#secondbox .secondbox4, #secondbox .secondbox5{height: 30px;
+        line-height: 10px;
+        text-align: center;
+        padding-top: 15px;
+        margin-top: 20px;
+
+    }
+    #secondbox .secondbox1{
+        grid-area: a;
+        line-height: 20px;
+        margin: 20px;
+    }
+    #secondbox .secondbox2{
+        grid-area: b;
+        background-color: skyblue;
+    }
+    #secondbox .secondbox3{
+        grid-area: c;
+        background-color: rgb(230, 224, 224);
+    }
+    #secondbox .secondbox4{
+        grid-area: d;
+        background-color: rgb(230, 224, 224);
+    }
+    #secondbox .secondbox5{
+        grid-area: e;
+        background-color: rgb(230, 224, 224);
+    }
+    #thirdbox{
+        display: grid;
+        height: 320px;
+        width: 70%;
+        grid-template: "aa bb cc";
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #thirdbox>div{
+        margin:10px;
+        padding:5px
+
+    }
+    #thirdbox img{
+        width: 100%;
+        height: 50%;
+    }
+    #thirdbox .thirdbox1{
+        grid-area: aa;
+    }
+    #thirdbox .thirdbox2{
+        grid-area: bb;
+    }
+    #thirdbox .thirdbox3{
+        grid-area: cc;
+    }
+    #thirdbox button{
+        height: 30px;
+        margin-top: 20px;
+        border: 2px solid skyblue;
+
+    }
+    @media (max-width: 992px){
+        #thirdbox{
+            grid-template: "aa bb "
+             "cc cc";
+        }
+        #secondbox{
+            grid-template:"a b" 
+        "c d"
+       
+        "e e";
+        }
+
+    }
+    @media (max-width: 350px){
+        #thirdbox{
+            grid-template: "aa "
+            "bb" 
+            "cc";
+        }
+        #secondbox{
+            grid-template:"a" 
+        "b"
+        "c"
+        "d"
+        "e";
+        }
+    }
+    
+    
+</style>
+</head>
+<body>
+    <div id="firstbox">
+        <div class="firstbox1"><img src=https://cdn5.vectorstock.com/i/1000x1000/37/59/big-think-logo-lightbulb-logo-icon-vector-21513759.jpg alt="">
+            <h3>Scholarship</h3>
+            <h4>Available</h4>
+        </div>
+        <div class="firstbox2"><img src=https://cdn5.vectorstock.com/i/1000x1000/37/59/big-think-logo-lightbulb-logo-icon-vector-21513759.jpg alt="">
+            <h3>Scholarship</h3>
+            <h4>Available</h4>
+        </div>
+        <div class="firstbox3"><img src=https://cdn5.vectorstock.com/i/1000x1000/37/59/big-think-logo-lightbulb-logo-icon-vector-21513759.jpg alt="">
+            <h3>Scholarship</h3>
+            <h4>Available</h4>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+
+
+    <div id="secondbox">
+    <div class="secondbox1"><h1>Popular Programs</h1></div>
+    <div class="secondbox2">Graduate</div>
+    <div class="secondbox3">Post Graduate</div>
+    <div class="secondbox4">Phd Scholarships</div>
+    <div class="secondbox5">Training</div>
+    </div>
+
+    <div class="clear"></div>
+    <div id="thirdbox">
+        <div class="thirdbox1"><img src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt=""><h4>Agriculture</h4>
+            <h3>Chemical Engineering</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, hic!</br>
+            <button>Apply Now</button>
+        </div>
+        
+        <div class="thirdbox2"><img src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt="">
+            <h4>Agriculture</h4>
+            <h3>Chemical Engineering</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, hic!</br>
+            <button>Apply Now</button>
+        </div>
+        <div class="thirdbox3"><img src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt="">
+            <h4>Agriculture</h4>
+            <h3>Chemical Engineering</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, hic!</br>
+            <button>Apply Now</button>
+        
+        </div>
+    </div>
+</body>
+</html>

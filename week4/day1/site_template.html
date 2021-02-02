@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #full{
+            margin: auto;
+            display: grid;
+            width: 90%;
+            gap: 30px;
+            grid-template: "nav nav"
+            "left right";
+        }
+        #nav{
+            height: 60px;
+            background-color: red;
+            grid-area: nav;
+        }
+        #left{
+            height: 80vh;
+            background-color: rgb(0, 255, 21);
+            grid-area: left;
+        }
+        #right{
+            height: 80vh;
+            background-color:teal;
+            grid-area: right;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="full">
+        <div id="nav"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+        
+    </div>
+</body>
+
+</html>

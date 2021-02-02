@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexi{
+            display: flex;
+            width: 800px;
+            margin: auto;
+
+        }
+
+        .flexi div {
+            background-color: teal;
+            flex-basis: 150px;
+            height: 150px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        #mahi{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 150px 150px 150px;
+            justify-content: center;
+        }
+        #mahi div{
+            background: teal;
+            border-radius: 10px;
+
+
+        }
+        #mahi div:nth-child(2){
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #mahi div:nth-child(4){
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #mahi div:nth-child(9){
+            grid-row-start: 3;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        #mm{
+            display: grid;
+            gap: 20px;
+            grid-template: "nav nav nav"
+            "left left left"
+            "r1 r2 r3" ;
+        }
+        #nav{
+            height: 50px;
+            background-color: yellow;
+            grid-area: nav;
+
+        }
+        #left{
+            height: 350px;
+            background-color:red;
+            grid-area: left;
+            
+        }
+        #r1{
+            height: 100px;
+            background-color: green;
+            grid-area: r1;
+            
+        }
+        #r2{
+            height: 100px;
+            background-color: green;
+            grid-area: r2;
+            
+        }
+        #r3{
+            height: 100px;
+            background-color: green;
+            grid-area: r3;
+            
+        }
+        @media(min-width: 992px){
+            #mm{
+                grid-template: "nav nav nav"
+                "left left r1"
+                "left left r2"
+                "left left r3";
+            }
+        }
+        @media(max-width: 600px){
+            #mm{
+                grid-template: "nav "
+                "left "
+                "r1"
+                "r2"
+                "r3";
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+        <div class="flexi">
+            <div></div>
+        </div>
+        <div class="flexi">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flexi">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flexi">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+       <hr/>
+
+
+
+
+       <div id="mahi">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+<hr/>
+
+
+<div id="mm">
+    <div id="nav" >a</div>
+    <div id="left">b</div>
+    <div id="r1">c</div>
+    <div id="r2">d</div>
+    <div id="r3">e</div>
+</div>
+
+
+</body>
+
+</html>

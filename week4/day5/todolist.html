@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="item" type="text"/>
+        <input value="add Items" type="submit"/>
+    </form>
+    <table>
+        <!-- <tr>
+            <td>milk</td>
+            <td><button>Complete</button></td>
+            <td><button>Delete</button></td>
+        </tr> -->
+    </table>
+
+
+    <script>
+        var form = document.querySelector("form")
+        var table = document.querySelector("table")
+        function complete(event){
+            var target=event.target;
+            target.textContent="Completed";
+            target.style.backgroundColor="purple";
+            target.removeEventListener("click",complete)
+
+        }
+        function deleteItem(event){
+            var target=event.target;
+            target.parentNode.parentNode.remove()
+            // delete btn<td<tr
+
+        }
+        function additems(e){
+            e.preventDefault()
+            var item = document.getElementById("item").value
+           if(item.length>0){
+               var row= document.createElement("tr")
+               var col1= document.createElement("td")
+               var col2= document.createElement("td")
+               var col3= document.createElement("td")
+               var markComp =document.createElement("button")
+               var deletebtn =document.createElement("button")
+                col1.textContent=item
+                markComp.textContent="Mark Complete";
+                markComp.addEventListener("click", complete)
+                deletebtn.textContent="Delete";
+                deletebtn.addEventListener("click", deleteItem)
+                col3.appendChild(deletebtn)
+                col2.appendChild(markComp)
+                row.appendChild(col1)
+                row.appendChild(col2)
+                row.appendChild(col3)
+                table.appendChild(row)
+                document.getElementById("item").value=""
+                
+           }
+        }form.addEventListener("click", additems)
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mahi{
+            display: grid;
+            width: 70%;
+            margin: auto;
+            gap: 20px;
+            grid-template: "nav nav"
+            "box1 box3"
+            "box2 box4";
+            margin-top: 10px;
+            
+        }
+        #nav{
+            grid-area: nav;
+            height: 50px;
+            background-color: yellow;
+            font-size: 30px;
+            padding-left: 10px;
+
+        }
+        #box1{
+            grid-area: box1;
+            height: 160px;
+            background-color: red;
+            font-size: 30px;
+            padding-left: 10px;
+
+        }
+        #box3{
+            grid-area: box3;
+            height: 160px;
+            background-color: blue;
+            font-size: 30px;
+            padding-left: 10px;
+
+        }
+        #box2{
+            grid-area: box2;
+            height: 160px;
+            background-color: green;
+            font-size: 30px;
+            padding-left: 10px;
+
+        }
+        #box4{
+            grid-area: box4;
+            height: 160px;
+            background-color: grey;
+            font-size: 30px;
+            padding-left: 10px;
+
+        }
+        @media(min-width: 992px){
+          #mahi{  grid-template: "nav nav nav nav "
+            "box1 box2 box3 box4";
+    
+        }
+        }
+        @media(max-width: 600px) {
+            #mahi {
+                grid-template: "nav"
+                    "box1"
+                    "box4"
+                    "box2"
+                    "box3";
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="mahi">
+        <div id="nav">Navigation</div>
+        <div id="box1">Box1</div>
+        <div id="box2">Box2</div>
+        <div id="box3">Box3</div>
+        <div id="box4">Box4</div>
+    </div>
+    
+</body>
+</html>
